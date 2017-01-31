@@ -1,0 +1,29 @@
+/**
+ * Settings: Breakpoints
+ * @author: Yorgos Kakavas
+ *
+ */
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1250px;
+
+$breakpoint-xs-min: $breakpoint-xs;
+$breakpoint-xs-max: $breakpoint-sm - 1px;
+
+$breakpoint-sm-min: $breakpoint-sm;
+$breakpoint-sm-max: $breakpoint-md - 1px;
+
+$breakpoint-md-min: $breakpoint-md;
+$breakpoint-md-max: $breakpoint-lg - 1px;
+
+$breakpoint-lg-min: $breakpoint-lg;
+$breakpoint-lg-max: 10000px;
+
+$breakpoints: (
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg
+) !default;

@@ -1,7 +1,142 @@
-h3 {
-	color: red;
+/*
+  Project: theGal
+  Author: yorgos k
+ */
+
+@import 'settings/_colors.scss';
+@import 'settings/_global.scss';
+@import 'settings/_fonts.scss';
+@import 'settings/_breakpoints.scss';
+@import 'settings/_grid.scss';
+@import 'settings/_seperators.scss';
+@import 'settings/_iconvars.scss';
+
+@import 'tools/_mixins.scss';
+
+@import 'generic/_box-sizing.scss';
+@import 'generic/_reset.scss';
+
+@import 'elements/_headings.scss';
+@import 'elements/_hr.scss';
+@import 'elements/_links.scss';
+@import 'elements/_lists.scss';
+@import 'elements/_page.scss';
+
+@import 'objects/_list-bare.scss';
+
+@import 'components/_layout.scss';
+
+@import 'trumps/_utilities.scss';
+
+@import 'fonts/_icons.scss';
+
+/* Temporary */
+body {
+	background-color: #22252a;
+	color: $color-text-light-grey;
+	font-family: $font-OpenSans !important;
+}
+
+header {
+	background-color: #2d3035;
+	height: 70px;
+	border-bottom: 2px solid $color-border-light;
+	display: flex;
+	align-items: center;
+
+	h1 {
+	  font-family: $font-OpenSans;
+	  font-size: 14px;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: normal;
+	  letter-spacing: 0.7px;
+	  text-align: left;
+
+	  color: $color-text-light-grey;
+	  display: flex;
+	  align-items: center;
+
+	  .icon-img-logo {
+		font-size: 32px;
+		color: $color-bg-pencil;
+		text-shadow: 0px 0px 3px $color-border-light;
+		margin: auto 23px auto 32px;
+			}
+	}
 }
 
 .content {
+display: flex;
+flex-wrap: wrap;
+}
+
+.sidebar {
+	min-width: 285px;
+	height: 100%;
+  background-color: #2d3035;
+  box-shadow: 3px 0 0 0 #1b1e24, 1px 0 0 0 #45484d;
+  ul.menu {
+  list-style: none;
+	}
+
+	.menu li {
+		display: flex;
+	}
+  .menu li h3 {
+  	font-family: $font-OpenSans;
+  	font-size: 14px;
+  	//font-weight: normal;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: normal;
+  	letter-spacing: 0.7px;
+  	text-align: left;
+
+
+  	color: $color-text-light-grey;
+  }
+}
+
+.main .home {
+	margin: 28px;
+	background-color: #2d3035;
+}
+
+.gallery-container {
 	display: flex;
+	flex-wrap: wrap;
+
+	.gallery-item {
+		width: 210px;
+		height:370px;
+		margin: 30px;
+		padding:30px;
+		background-color: #2d3035;
+
+
+		border-radius: 6px;
+  	border: solid 1px #1b1e24;
+
+		.gallery-item__picture {
+			width:150px;
+			margin-bottom: 22px;
+		}
+
+		.gallery-item__album-Id {
+			margin-bottom: 0px;
+		}
+
+		.gallery-item__picture-Id {
+			margin-bottom: 10px;
+		}
+
+		.gallery-item__picture-title {
+			overflow: hidden;
+			border-top: solid 1px $color-border-light;
+			font-size: 12px;
+			padding-top: 10px;
+		}
+	}
 }

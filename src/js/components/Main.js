@@ -5,37 +5,10 @@ import axios from 'axios';
 
 export default class Main extends React.Component {
 
-	constructor(props) {
-    super(props);
-
-    this.state = {
-      pictures: []
-    };
-  }
-
-  componentDidMount() {
-    axios.get(`http://jsonplaceholder.typicode.com/photos`)
-      .then((pictures) => this.setState({
-      	pictures: pictures.data
-      }))
-  }
-
-
   render() {
-  		for (var i = this.state.pictures.length - 1; i >= 0; i--) {
-  			console.log(this.state.pictures[i])
-  		}
   	return (
-      <section>
-	      {this.state.pictures.map((picture, index) => (
-	        <div key={index} class="col-sm-3">
-	        <img src={picture.thumbnailUrl}/>
-	        <p>Album ID: {picture.albumId}</p>
-	        <p>Photo ID: {picture.id}</p>
-	        <p>{picture.title}</p>
-	        </div>
-	    	))}
-
+      <section class = "main">
+	    	<div class= "home">
       	<div class="top">
 					<h1 class="top__title">H1 Article Main Title</h1>
 					<p class="top__content">This an introduction text. It has a fixed size, and a custom line height, so you can experiment with it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium.</p>
@@ -51,6 +24,7 @@ export default class Main extends React.Component {
 						<p class="bottom__content bottom__content_grid">Aenean dignissim velit quis leo consequat ultricies. Proin quis pretium justo. Vestibulum at eros nisl.</p>
 						<p class="bottom__content bottom__content_grid">Fusce lobortis erat ante, eu cursus sapien molestie at. Pellentesque placerat ante diam, et euismod lacus dictum vel. Phasellus vitae sollicitudin mi.</p>
 						<p class="bottom__content bottom__content_grid">Mauris lacinia porta faucibus. Fusce eu est ac eros vulputate mollis in ac felis. Aenean commodo scelerisque mi sed imperdiet.</p>
+				</div>
 				</div>
       </section>
     );

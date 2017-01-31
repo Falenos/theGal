@@ -1,0 +1,28 @@
+/**
+ * Settings: Fonts
+ * @author: Yorgos
+ *
+ */
+
+@import '../fonts/fonts';
+@import 'colors';
+
+$font-arial: 'OpenSans', 'Helvetica Neue', helvetica, sans-serif !default;
+
+$font-color:            $color-text-light-grey !default;
+$font-family:           $font-OpenSans !default;
+$font-size:             1.6em !default;
+$font-weight:           normal !default;
+$font-line-height:      normal !default;
+
+
+
+$font-weights: (
+  400,
+  600,
+  700
+);
+
+$font-families: (
+  OpenSans: $font-OpenSans,
+)!default;

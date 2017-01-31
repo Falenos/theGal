@@ -1,0 +1,25 @@
+/**
+ * Settings: Separators
+ * @author: Yorgos Kakavas
+ *
+ */
+
+$separator-xxl:         240px !default;
+$separator-xl:          120px !default;
+$separator-lg:           60px !default;
+$separator-md:           30px !default;
+$separator-sm:           20px !default;
+$separator-xs:           15px !default;
+$separator-xxs:          10px !default;
+$separator-xxxs:          5px !default;
+
+$separators: (
+  xxl: $separator-xxl,
+  xl : $separator-xl,
+  lg : $separator-lg,
+  md : $separator-md,
+  sm : $separator-sm,
+  xs : $separator-xs,
+  xxs : $separator-xxs,
+  xxxs : $separator-xxxs
+);
