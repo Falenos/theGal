@@ -2,19 +2,13 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-
 export default class Gallery extends React.Component {
 
-	constructor(props) {
+  constructor(props) {
     super(props);
-
     this.state = {
       pictures: []
     };
-  }
-
-  componentWillMount() {
-
   }
 
   componentDidMount() {

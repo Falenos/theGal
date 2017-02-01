@@ -2,10 +2,6 @@ import React from "react";
 
 export default class Search extends React.Component {
 
-  // getDefaultProps() {
-  //   searchVal: null
-  // }
-
 	Search(e) {
     e.preventDefault();
 		console.log(e.target.value);
@@ -16,7 +12,7 @@ export default class Search extends React.Component {
   render() {
   	console.log(this.props)
     return (
-      <input type="text" onChange={this.Search.bind(this)}/>
+      <input type="text" onChange={this.Search}/>
     );
   }
 }

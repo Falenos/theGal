@@ -140,3 +140,36 @@ flex-wrap: wrap;
 		}
 	}
 }
+
+.select {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    height: 40px;
+    width: 240px;
+    position: relative;
+    display: block;
+}
+
+select{
+    height: 40px;
+    padding: 5px;
+    border: 0;
+    font-size: 16px;
+    width: 240px;
+   -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.select:after {
+    content: $icon-ic-arrow;
+		font-family: icomoon;
+    color: $color-bg-pencil;
+    padding: 12px 8px;
+    position: absolute; right: 0; top: 0;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    box-sizing: border-box;
+}

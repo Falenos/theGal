@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 
-export default class Main extends React.Component {
+export default class HomePage extends React.Component {
 
   render() {
   	return (
