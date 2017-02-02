@@ -1,0 +1,38 @@
+.gallery-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.gallery-item {
+		font-size: 12px;
+		width: 210px;
+		height: 310px;
+		margin: 15px;
+		padding: 30px;
+		background-color: #2d3035;
+		border-radius: 6px;
+		border: solid 1px #1b1e24;
+
+		.gallery-item__picture {
+			width: 150px;
+			margin-bottom: 22px;
+		}
+
+		.gallery-item__album-Id {
+			margin-bottom: 0;
+		}
+
+		.gallery-item__picture-Id {
+			margin-bottom: 10px;
+		}
+
+		.gallery-item__picture-title {
+			height: 42px;
+			line-height: 1.45;
+			overflow: hidden;
+			border-top: solid 1px $color-border-light;
+			font-size: 11px;
+			padding: 10px 0 19px;
+		}
+	}
+}

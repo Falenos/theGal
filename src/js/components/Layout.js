@@ -40,8 +40,8 @@ export default class Layout extends React.Component {
           <Sidebar sidebarToggle={this.handleSidebarToggle.bind(this)} visible= {this.state.visible}/>
         </section>
         <section class="content">
-          <Gallery />
           <HomePage />
+          <Gallery />
         </section>
       </div>
     );

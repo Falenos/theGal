@@ -14,7 +14,7 @@ export default class HomePage extends React.Component {
 					<p class="top__content">This an introduction text. It has a fixed size, and a custom line height, so you can experiment with it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium.</p>
 				</div>
 				<div class="middle">
-					<h2 class="middle__tittle">H2 Section Heading</h2>
+					<h2 class="middle__title">H2 Section Heading</h2>
 					<p class="middle__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros. Vestibulum condimentum lectus in convallis feugiat. Sed vulputate fringilla felis. Aliquam ut arcu et dui feugiat scelerisque eu quis diam. Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius.</p>
 				</div>
 				<div class="bottom">

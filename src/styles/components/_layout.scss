@@ -1,3 +1,98 @@
 // Layout
 
+body {
+	background-color: #22252a;
+	color: $color-text-light-grey;
+	font-family: $font-OpenSans !important;
+}
 
+header {
+	width: 285px;
+	background-color: #2d3035;
+	min-height: 70px;
+	width: 100%;
+	border-bottom: 1px solid $color-border-light;
+	box-shadow: 0 1px 0 0 #45484d, 0 3px 0 0 #1b1e24;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 1;
+	align-items: flex-end;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	@include respond-up-to(sm) {
+		position: inherit;
+	};
+
+	.select-con {
+		@include respond-up-to(md) {
+			width: 50%;
+			margin: 0 auto-1;
+			border-right: 0;
+		};
+	}
+
+	.search-con,
+	.select-con,
+	.title {
+		align-self: center;
+		border: 1px solid $color-border-light;
+		margin: 0 0 -1px -1px;
+		@include respond-up-to(sm) {
+			width: 50%;
+
+			.search {
+				width: 130px;
+				padding: 0 5px;
+			}
+		};
+		@include respond-up-to(xs) {
+			width: 100%;
+		};
+	};
+}
+
+.sidebar .menu {
+	width: 285px;
+	min-width: 150px;
+	position: fixed;
+	top: 71px;
+	height: 100%;
+	@include respond-up-to(md) {
+		position: fixed;
+		top: 140px;
+		height: 100%;
+		width: 30%;
+	};
+	@include respond-up-to(sm) {
+		position: absolute;
+		top: 140px;
+		height: 200px;
+		width: 100%;
+	};
+	@include respond-up-to(xs) {
+		position: absolute;
+		top: 278px;
+		height: 300px;
+		width: 100%;
+	};
+}
+
+.content {
+	margin: 101px 0 0 285px;
+	@include respond-up-to(md) {
+		margin-left: 30%;
+		position: absolute;
+		width: 70%;
+		top: 71px;
+	};
+	@include respond-up-to(sm) {
+		margin: 272px 0;
+		width: 100%;
+	};
+	@include respond-up-to(xs) {
+		margin: 522px 0;
+	};
+}

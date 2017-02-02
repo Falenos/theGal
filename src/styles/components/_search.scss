@@ -1,0 +1,29 @@
+.search-con {
+  height: 70px;
+  width: 284px;
+}
+
+.search {
+  width: 224px;
+  margin: 17px 30px;
+  border: 0;
+  border-radius: 50px;
+  height: 32px;
+  background-color: #1f2228;
+  padding: 0 36px 0 16px;
+}
+
+.search-con:after {
+  content: $icon-ic-search;
+  font-family: icomoon;
+  position: relative;
+  left: 220px;
+  bottom: 45px;
+  z-index: 5;
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  color: $color-text-light-grey;
+}
