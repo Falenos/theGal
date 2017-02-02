@@ -18,24 +18,24 @@ export default class Sidebar extends React.Component {
       return (
       	<ul class="menu">
       		<li class="menu-item">
-      			<div class="icon-ic-home"></div>
-      			<h3 class="henu-item__text">Home</h3>
+      			<div class="icon icon-ic-home"></div>
+      			<h3 class="menu-item__text">Home</h3>
       		</li>
       		<li class="menu-item">
-      			<div class="icon-ic-gallery"></div>
-      			<h3 class="henu-item__text">Gallery</h3>
+      			<div class="icon icon-ic-gallery"></div>
+      			<h3 class="menu-item__text">Gallery</h3>
       		</li>
       		<li class="menu-item">
-      			<div class="icon-ic-date"></div>
-      			<h3 class="henu-item__text">Due Date</h3>
+      			<div class="icon icon-ic-date"></div>
+      			<h3 class="menu-item__text">Due Date</h3>
       		</li>
       		<li class="menu-item">
-      			<div class="icon-ic-project"></div>
-      			<h3 class="henu-item__text">Per Project</h3>
+      			<div class="icon icon-ic-project"></div>
+      			<h3 class="menu-item__text">Per Project</h3>
       		</li>
       		<li class="menu-item">
-      			<div class="icon-ic-assign"></div>
-      			<h3 class="henu-item__text">Assigned By</h3>
+      			<div class="icon icon-ic-assign"></div>
+      			<h3 class="menu-item__text">Assigned By</h3>
       		</li>
       	</ul>
     );

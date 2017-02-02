@@ -1,0 +1,134 @@
+/**
+ * Utility: Flex
+ *
+ */
+
+.flex {
+  display: flex !important;
+
+  &--same-height {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  &--center {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &--sm-wrap {
+    @include respond-up-to(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--space-between-sm {
+    @include respond-up-to(sm) {
+      justify-content: space-between;
+    }
+  }
+
+  &--column {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  &--column-sm {
+    @include respond-up-to(sm) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  &--column-md {
+    @include respond-up-to(md) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
+
+.flex-stop {
+  &--xxs {
+    @media (max-width: #{$breakpoint-xs-min - 1px}) {
+      display: block !important;
+    }
+  }
+
+  &--xs {
+    @media (min-width: #{$breakpoint-xs-min}) and (max-width: #{$breakpoint-xs-max}) {
+      display: block !important;
+    }
+  }
+
+  &--sm {
+    @media (min-width: #{$breakpoint-sm-min}) and (max-width: #{$breakpoint-sm-max}) {
+      display: block !important;
+    }
+  }
+
+  &--md {
+    @media (min-width: #{$breakpoint-md-min}) and (max-width: #{$breakpoint-md-max}) {
+      display: block !important;
+    }
+  }
+
+  &--lg {
+    @media (min-width: #{$breakpoint-lg-min}) {
+      display: block !important;
+    }
+  }
+
+  &--xs-up {
+    @media (min-width: #{$breakpoint-xs-min}) {
+      display: block !important;
+    }
+  }
+
+  &--sm-up {
+    @media (min-width: #{$breakpoint-sm-min}) {
+      display: block !important;
+    }
+  }
+
+  &--md-up {
+    @media (min-width: #{$breakpoint-md-min}) {
+      display: block !important;
+    }
+  }
+
+  &--lg-up {
+    @media (min-width: #{$breakpoint-lg-min}) {
+      display: block !important;
+    }
+  }
+
+  &--xs-down {
+    @media (max-width: #{$breakpoint-xs-min - 1px}) {
+      display: block !important;
+    }
+  }
+
+  &--sm-down {
+    @media (max-width: #{$breakpoint-xs-max}) {
+      display: block !important;
+    }
+  }
+
+  &--md-down {
+    @media (max-width: #{$breakpoint-sm-max}) {
+      display: block !important;
+    }
+  }
+
+  &--lg-down {
+    @media (max-width: #{$breakpoint-md-max}) {
+      display: block !important;
+    }
+  }
+}

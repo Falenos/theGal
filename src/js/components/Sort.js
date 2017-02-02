@@ -14,13 +14,16 @@ var Sort = React.createClass({
 	},
 	render: function() {
 		return (
-      <label class="select">
-        <select value={this.state.value} onChange={this.setValue}>
-          <option value="Image Id">Image Id</option>
-          <option value="Album Id">Album Id</option>
-          <option value="Image Title">Image Title</option>
-        </select>
-      </label>
+			<div class="select-con select-con_sort">
+				<label class="select-con__label select-con__label_sort">SORT BY</label>
+	      <div class="select select_sort">
+	        <select value={this.state.value} onChange={this.setValue}>
+	          <option value="Image Id">Image Id</option>
+	          <option value="Album Id">Album Id</option>
+	          <option value="Image Title">Image Title</option>
+	        </select>
+	      </div>
+			</div>
 		);
   }
 });

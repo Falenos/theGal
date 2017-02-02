@@ -1,0 +1,81 @@
+/**
+ * Mixin: Type
+ * Creates an extendable typography style
+ *
+ */
+
+$placeholders: ();
+$default-breakpoint: root;
+$current-breakpoint: $default-breakpoint;
+
+@mixin media-placeholder($name) {
+  @if not index($placeholders, $name) {
+    $placeholders: append($placeholders, $name) !global;
+
+    @each $breakpoint, $value in $breakpoints {
+      @media (min-width: $value) {
+        @at-root {
+          %#{$name}-#{$breakpoint} {
+            @content;
+          }
+        }
+      }
+    }
+
+    @at-root {
+      %#{$name}-#{$default-breakpoint} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin type($fontFamilyName: 'OpenSans', $fontSize: 16, $letterSpacing: 0, $lineHeight: normal) {
+  $name: null;
+
+  @if $letterSpacing == 0 {
+    @if $lineHeight == 'normal' {
+      $name: #{$fontFamilyName}-#{$fontSize};
+
+      @include media-placeholder($name) {
+        font-family: $fontFamilyName;
+        font-size: pxToEm($fontSize);
+      }
+    }
+
+    @else {
+      $name: #{$fontFamilyName}-#{$fontSize}-lh#{$lineHeight};
+
+      @include media-placeholder($name) {
+        font-family: $fontFamilyName;
+        font-size: pxToEm($fontSize);
+        line-height: #{$lineHeight}px;
+      }
+    }
+  }
+
+  @else {
+    @if $lineHeight == 'normal' {
+      $name: #{$fontFamilyName}-#{$fontSize}-ls#{$letterSpacing};
+
+      @include media-placeholder($name) {
+        font-family: $fontFamilyName;
+        font-size: pxToEm($fontSize);
+        letter-spacing: letterSpacing($letterSpacing);
+      }
+    }
+
+    @else {
+      $name: #{$fontFamilyName}-#{$fontSize}-ls#{$letterSpacing}-lh#{$lineHeight};
+
+      @include media-placeholder($name) {
+        font-family: $fontFamilyName;
+        font-size: pxToEm($fontSize);
+        letter-spacing: letterSpacing($letterSpacing);
+        line-height: #{$lineHeight}px;
+      }
+    }
+  }
+
+  @extend %#{$name}-#{$current-breakpoint};
+}

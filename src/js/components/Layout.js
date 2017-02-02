@@ -29,16 +29,20 @@ export default class Layout extends React.Component {
 
   render() {
     return (
-      <div>
-        <Title onNewSearch={this.handleSearch} title={this.state.title}/>
-        <Search />
-        <Filter />
-        <Sort />
-        <div class= "content">
-        <Sidebar sidebarToggle={this.handleSidebarToggle.bind(this)} visible= {this.state.visible}/>
-        <Gallery />
-        <HomePage />
-        </div>
+      <div class="app">
+        <header>
+          <Title onNewSearch={this.handleSearch} title={this.state.title}/>
+          <Search />
+          <Sort />
+          <Filter />
+        </header>
+        <section class="sidebar">
+          <Sidebar sidebarToggle={this.handleSidebarToggle.bind(this)} visible= {this.state.visible}/>
+        </section>
+        <section class="content">
+          <Gallery />
+          <HomePage />
+        </section>
       </div>
     );
   }

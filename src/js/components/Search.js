@@ -12,7 +12,9 @@ export default class Search extends React.Component {
   render() {
   	console.log(this.props)
     return (
-      <input type="text" onChange={this.Search}/>
-    );
+			<div class="search-con">
+      	<input class="search" type="text" onChange={this.Search}/>
+			</div>
+		);
   }
 }

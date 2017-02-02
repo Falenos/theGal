@@ -1,0 +1,169 @@
+/**
+ * Module: Type
+ *
+ */
+
+$colors: ()!default;
+$font-families: ()!default;
+$font-weights: ()!default;
+
+.type {
+  -ms-word-break: break-word;
+
+  .type--button {
+    font-size: 15px;
+    letter-spacing: 1.15px;
+    line-height: 20px;
+  }
+
+  .type--text-sm {
+    font-size: 13px;
+    letter-spacing: -0.06px;
+
+    @include respond-to(md) {
+      font-size: 15px;
+      letter-spacing: -0.07px;
+    }
+  }
+
+  .type--text {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.06px;
+
+    @include respond-to(sm) {
+      font-size: 17px;
+      line-height: 30px;
+      letter-spacing: -0.07px;
+    }
+
+    br {
+      line-height: 0.8em;
+    }
+  }
+
+  .type--text-xl {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.08px;
+
+    @include respond-to(sm) {
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: -0.1px;
+    }
+  }
+
+  .type--text-lg {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.07px;
+
+    @include respond-to(sm) {
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: -0.1px;
+    }
+  }
+
+  .type--sup-fix {
+    margin-top: -5px;
+    sup {
+      font-size: 0.5em;
+    }
+  }
+
+  .type--title-xs {
+    font-size: 25px;
+    line-height: 25px;
+
+    @include respond-to(sm) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+
+  .type--title-sm {
+    font-size: 20px;
+    line-height: 40px;
+
+    @include respond-to(sm) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  .type--title {
+    font-size: 25px;
+    line-height: 25px;
+
+    @include respond-to(sm) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .type--title-md {
+    font-size: 30px;
+    line-height: 40px;
+
+    @include respond-to(sm) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .type--title-lg {
+    font-size: 27px;
+    line-height: 25px;
+
+    @include respond-to(sm) {
+      font-size: 53px;
+      line-height: 50px;
+    }
+  }
+
+  .type--caps {
+    text-transform: uppercase;
+  }
+
+  .type--centered {
+    text-align: center;
+  }
+
+  .type--one-line {
+    white-space: nowrap;
+  }
+
+  .type--italic {
+    font-style: italic;
+  }
+
+  .type--underlined {
+    text-decoration: underline;
+  }
+
+  .type--themed {
+    .section--black .type {
+      color: $color-text-white;
+    }
+  }
+
+  @each $color-name, $color in $colors {
+    .type--#{$color-name} {
+      color: $color;
+    }
+  }
+
+  @each $font-family-name, $font-family in $font-families {
+    .type--#{$font-family-name} {
+      font-family: $font-family !important;
+    }
+  }
+
+  @each $font-weight in $font-weights {
+    .type--#{$font-weight} {
+      font-weight: $font-weight;
+    }
+  }
+}

@@ -11,7 +11,7 @@ export default class Title extends React.Component {
   render() {
   	console.log(this.props)
     return (
-      <h1><span onClick={this.toggle.bind(this)} class="icon-img-logo"></span>{this.props.title}</h1>
+      <h1 class="title"><span onClick={this.toggle.bind(this)} class="icon-img-logo"></span>{this.props.title}</h1>
     );
   }
 }
