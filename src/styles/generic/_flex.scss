@@ -13,11 +13,23 @@
 
   &--center {
     align-items: center;
-    justify-content: space-around;
+    // justify-content: space-around;
+  }
+
+  &--md-wrap {
+    @include respond-up-to(md) {
+      flex-wrap: wrap;
+    }
   }
 
   &--sm-wrap {
     @include respond-up-to(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--xs-wrap {
+    @include respond-up-to(xs) {
       flex-wrap: wrap;
     }
   }

@@ -1,29 +1,31 @@
+// Search Box
+
 .search-con {
   height: 70px;
   width: 284px;
 }
 
 .search {
-  width: 224px;
-  margin: 17px 30px;
-  border: 0;
+  background-color: $color-bg-black-1;
   border-radius: 50px;
+  border: 0;
   height: 32px;
-  background-color: #1f2228;
+  margin: 17px $sep-md;
   padding: 0 36px 0 16px;
+  width: 224px;
 }
 
 .search-con:after {
-  content: $icon-ic-search;
-  font-family: icomoon;
-  position: relative;
-  left: 220px;
   bottom: 45px;
-  z-index: 5;
-  text-align: center;
-  width: 20%;
-  height: 100%;
-  pointer-events: none;
   box-sizing: border-box;
   color: $color-text-light-grey;
+  content: $icon-ic-search;
+  font-family: icomoon;
+  height: 100%;
+  left: 220px;
+  pointer-events: none;
+  position: relative;
+  text-align: center;
+  width: 20%;
+  z-index: 5;
 }

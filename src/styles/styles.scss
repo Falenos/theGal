@@ -1,7 +1,13 @@
 /*
 	  Project: theGal
 	  Author: yorgos k
-	 */
+
+	  The structure of the /style follows (a bit loosely) the principles of ITCSS
+	  https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+		The components are defined based on the react components mostly, when this made sense
+*/
+
 @import 'settings/_colors.scss', 'settings/_global.scss', 'settings/_fonts.scss', 'settings/_breakpoints.scss', 'settings/_grid.scss', 'settings/_seperators.scss', 'settings/_iconvars.scss';
 @import 'tools/_mixins.scss', 'tools/_media-queries.scss', 'tools/_type.scss';
 @import 'generic/_box-sizing.scss', 'generic/_reset.scss', 'generic/_flex.scss', 'generic/_type.scss';

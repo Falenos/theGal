@@ -1,18 +1,20 @@
+// Sidebar Menu
+
 .menu {
-	background-color: #2d3035;
-	box-shadow: 1px 0 0 0 #45484d, 3px 0 0 0 #1b1e24;
-	z-index: 2;
+	background-color: $color-bg-pencil;
+	box-shadow: 1px 0 0 0 $color-border-light, 3px 0 0 0 $color-border;
 	list-style: none;
-	padding: 30px 10px;
+	padding: $sep-md $sep-xxs;
+	z-index: 2;
 }
 
 .menu-item {
-	display: inline-flex;
 	align-items: center;
-	margin: 20px;
+	display: inline-flex;
 	font-size: 22px;
+	margin: $sep-sm;
 	@include respond-up-to(sm) {
-		margin: 10px;
+		margin: $sep-xxs;
 	};
 }
 
@@ -27,14 +29,8 @@
 }
 
 .menu li h3 {
+	color: $color-text-light-grey;
 	font-family: $font-OpenSans;
 	font-size: 14px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: 0.7px;
-	text-align: left;
-	color: $color-text-light-grey;
 	margin: 0 32px;
 }

@@ -1,18 +1,21 @@
-.home {
-	margin: 15px 30px;
-	padding: 20px 30px;
-	background-color: #2d3035;
-	height: 140%;
+// Homepage
 
+.home {
+	background-color: $color-bg-pencil;
+	height: 140%;
+	margin: $sep-xs $sep-md;
+	padding: $sep-sm $sep-md;
+
+	//settings for the 3 areas
 	.middle,
 	.top {
-		padding: 20px;
 		max-width: 500px;
+		padding: $sep-sm;
 	}
 
 	.bottom {
-		padding: 20px;
 		max-width: 1000px;
+		padding: $sep-sm;
 	}
 
 	.bottom__title,
@@ -20,9 +23,10 @@
 	.top__title {
 		color: $color-text-silver;
 		font-weight: bold;
-		margin: 20px 0;
+		margin: $sep-sm 0;
 	}
 
+	// settings for the 3 areas content
 	.top__title {
 		font-size: 36px;
 	}
@@ -36,19 +40,22 @@
 	}
 
 	.bottom__content,
-	.middle__content,
-	.top__content {
+	.middle__content {
 		font-size: 14px;
 	}
 
+	.top__content {
+		font-size: 18px;
+		line-height: 1.5em;
+		text-shadow: 1px 1px $color-bg-black;
+	}
+
+	//setting the grid dispay
 	.bottom__content {
 		display: inline-flex;
+		padding: $sep-xs;
 		width: 33%;
-		padding: 15px;
 		@include respond-up-to(md) {
-			width: 100%;
-		}
-		@include respond-up-to(sm) {
 			width: 100%;
 		}
 	}

@@ -1,36 +1,40 @@
 // Layout
 
 body {
-	background-color: #22252a;
+	background-color: $color-bg-black;
 	color: $color-text-light-grey;
 	font-family: $font-OpenSans !important;
 }
 
+/*=============	HEADER ===============*/
+
 header {
-	width: 285px;
-	background-color: #2d3035;
-	min-height: 70px;
-	width: 100%;
+	background-color: $color-bg-pencil;
 	border-bottom: 1px solid $color-border-light;
-	box-shadow: 0 1px 0 0 #45484d, 0 3px 0 0 #1b1e24;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	z-index: 1;
-	align-items: flex-end;
+	box-shadow: 0 1px 0 0 $color-border-light, 0 3px 0 0 $color-border;
 	left: 0;
+	min-height: 70px;
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 1;
+
+	//flex predefined types are defined in generic/_flex.scss
+	@extend .flex;
+	@extend .flex--md-wrap;
+	@extend .flex--center;
+
+	//removing fixed positioning
 	@include respond-up-to(sm) {
 		position: inherit;
 	};
 
+	//removing border lines and setting width and alignment when the flex-wrap occurs
 	.select-con {
 		@include respond-up-to(md) {
-			width: 50%;
-			margin: 0 auto-1;
 			border-right: 0;
+			margin: 0 auto-1;
+			width: 50%;
 		};
 	}
 
@@ -44,8 +48,8 @@ header {
 			width: 50%;
 
 			.search {
+				padding: 0 $sep-xxxs;
 				width: 130px;
-				padding: 0 5px;
 			}
 		};
 		@include respond-up-to(xs) {
@@ -54,39 +58,43 @@ header {
 	};
 }
 
+/*=============	SIDEBAR ===============*/
+
 .sidebar .menu {
-	width: 285px;
+	height: 100%;
 	min-width: 150px;
 	position: fixed;
 	top: 71px;
-	height: 100%;
+	width: 285px;
 	@include respond-up-to(md) {
+		height: 100%;
 		position: fixed;
 		top: 140px;
-		height: 100%;
 		width: 30%;
 	};
 	@include respond-up-to(sm) {
+		height: 200px;
 		position: absolute;
 		top: 140px;
-		height: 200px;
 		width: 100%;
 	};
 	@include respond-up-to(xs) {
+		height: 300px;
 		position: absolute;
 		top: 278px;
-		height: 300px;
 		width: 100%;
 	};
 }
+
+/*=============	CONTENT ===============*/
 
 .content {
 	margin: 101px 0 0 285px;
 	@include respond-up-to(md) {
 		margin-left: 30%;
 		position: absolute;
-		width: 70%;
 		top: 71px;
+		width: 70%;
 	};
 	@include respond-up-to(sm) {
 		margin: 272px 0;

@@ -1,12 +1,14 @@
+// Sort and Filter box
+
 .select-con {
+  @extend .flex;
+	@extend .flex--md-wrap;
+	@extend .flex--center;
   border-left: 1px solid $color-border-light;
-  overflow: hidden;
   height: 70px;
-  position: relative;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
 }
 
 .select-con_filter {
@@ -17,18 +19,12 @@
   width: 251px;
 }
 
+// Labels
 .select-con__label {
-  height: 17px;
-  font-family: $font-OpenSans;
   font-size: 12px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #737780;
-  margin: 0 15px;
+  height: 17px;
+  margin: 0 $sep-xs;
 }
 
 .select-con__label_filter {
@@ -39,35 +35,36 @@
   width: 50px;
 }
 
+// select area
 select {
-  width: 120px;
-  height: 32px;
+  background-color: $color-bg-black-1;
   border-radius: 50px;
-  background-color: #1f2228;
+  border: 0;
+  color: $color-text-silver;
   font-family: $font-OpenSans;
   font-size: 12px;
   font-weight: 600;
+  height: 32px;
   padding: 0 16px;
-  color: $color-text-silver;
-  border: 0;
-  width: 120px;
+  width: $sep-xl;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
+// the arrow icons
 .select:after {
+  box-sizing: border-box;
+  color: $color-bg-pencil;
+  color: $color-text-light-grey;
   content: $icon-ic-arrow;
   font-family: icomoon;
-  color: $color-bg-pencil;
-  position: relative;
-  right: 26px;
-  top: 3px;
-  z-index: 1;
-  text-align: center;
-  width: 20%;
   height: 100%;
   pointer-events: none;
-  box-sizing: border-box;
-  color: $color-text-light-grey;
+  position: relative;
+  right: 26px;
+  text-align: center;
+  top: 3px;
+  width: 20%;
+  z-index: 1;
 }

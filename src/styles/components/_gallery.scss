@@ -1,21 +1,23 @@
+// Gallery
+
 .gallery-container {
-	display: flex;
+	@extend .flex;
 	flex-wrap: wrap;
 	justify-content: center;
 
 	.gallery-item {
-		font-size: 12px;
-		width: 210px;
-		height: 310px;
-		margin: 15px;
-		padding: 30px;
-		background-color: #2d3035;
+		background-color: $color-bg-pencil;
 		border-radius: 6px;
-		border: solid 1px #1b1e24;
+		border: solid 1px $color-border;
+		font-size: 12px;
+		height: 310px;
+		margin: $sep-xs;
+		padding: $sep-md;
+		width: 210px;
 
 		.gallery-item__picture {
-			width: 150px;
 			margin-bottom: 22px;
+			width: 150px;
 		}
 
 		.gallery-item__album-Id {
@@ -23,16 +25,16 @@
 		}
 
 		.gallery-item__picture-Id {
-			margin-bottom: 10px;
+			margin-bottom: $sep-xxs;
 		}
 
 		.gallery-item__picture-title {
+			border-top: solid 1px $color-border-light;
+			font-size: 11px;
 			height: 42px;
 			line-height: 1.45;
 			overflow: hidden;
-			border-top: solid 1px $color-border-light;
-			font-size: 11px;
-			padding: 10px 0 19px;
+			padding: $sep-xxs 0 19px;
 		}
 	}
 }

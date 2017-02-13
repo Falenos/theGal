@@ -1,25 +1,24 @@
 /**
- * Settings: Separators
+ * Settings: seperators
  * @author: Yorgos Kakavas
- *
  */
 
-$separator-xxl:         240px !default;
-$separator-xl:          120px !default;
-$separator-lg:           60px !default;
-$separator-md:           30px !default;
-$separator-sm:           20px !default;
-$separator-xs:           15px !default;
-$separator-xxs:          10px !default;
-$separator-xxxs:          5px !default;
+$sep-xxl:         240px !default;
+$sep-xl:          120px !default;
+$sep-lg:           60px !default;
+$sep-md:           30px !default;
+$sep-sm:           20px !default;
+$sep-xs:           15px !default;
+$sep-xxs:          10px !default;
+$sep-xxxs:          5px !default;
 
-$separators: (
-  xxl: $separator-xxl,
-  xl : $separator-xl,
-  lg : $separator-lg,
-  md : $separator-md,
-  sm : $separator-sm,
-  xs : $separator-xs,
-  xxs : $separator-xxs,
-  xxxs : $separator-xxxs
+$seps: (
+  xxl: $sep-xxl,
+  xl : $sep-xl,
+  lg : $sep-lg,
+  md : $sep-md,
+  sm : $sep-sm,
+  xs : $sep-xs,
+  xxs : $sep-xxs,
+  xxxs : $sep-xxxs
 );
